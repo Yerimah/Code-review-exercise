@@ -2,6 +2,8 @@ export default function showAllTodo(tasks) {
   const listElement = document.querySelector('.list');
   listElement.innerHTML = '';
 
+  //   listElement.innerHTML = '';
+
   tasks.list.forEach((listItem) => {
     listElement.innerHTML += `
           <div class="row" id="${listItem.index}">
@@ -31,6 +33,8 @@ export default function showAllTodo(tasks) {
       currentTask.description = inp.value;
 
       tasks.updateTodo(currentTask);
+
+      //   tasks.updateTodo(currentTask);
 
       setTimeout(() => {
         inp.parentNode.parentNode.querySelector('.fa-trash-alt').classList.add('hidden');
